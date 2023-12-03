@@ -5,16 +5,31 @@ import { Slideshow } from './Slideshow'
 
 
 function App() {
-  const [index, setIndex] = useState([filmData[0]])
+  const [index, setIndex] = useState(0)
+  
 
+  const next = () => {
+    setIndex(index + 1);
+  }
+  // console.log(`index in app ${index}`)
 
+  const back = () => {
+    setIndex(index - 1);
+  }
+
+  const startOver = () => {
+    setIndex(0)
+  }
 
   return (
     <>
     <h1>Studio Ghibli slideshow</h1>
-    <Slideshow/>
-    <div className='buttons'></div>
-    <button>Start Over</button>
+    <Slideshow index={index}/>
+    <div className='buttons'>
+    <button onClick={startOver} disabled={index==0}>Start Over</button>
+    <button onClick={next} disabled={filmData.length - 1 ==index}>Next</button>
+    <button onClick={back} disabled={index==0}>Back</button>
+    </div>
     </>
   )
 }
