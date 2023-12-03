@@ -26,9 +26,9 @@ function App() {
     <div className='mainBody'>
     <Slideshow index={index}/>
     <div className='buttons'>
-    <button onClick={startOver} disabled={index==0}>Start Over</button>&nbsp;&nbsp;
-    <button onClick={next} disabled={filmData.length - 1 ==index}>Next</button>&nbsp;&nbsp;
-    <button onClick={back} disabled={index==0}>Back</button>
+    <button onClick={startOver} disabled={index==0}>Start Over ⋘</button>&nbsp;&nbsp;
+    <button onClick={next} disabled={filmData.length - 1 ==index}>Next →</button>&nbsp;&nbsp;
+    <button onClick={back} disabled={index==0}>Back ←</button>
     </div>
     </div>
     </>
