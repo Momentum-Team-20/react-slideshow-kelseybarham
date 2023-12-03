@@ -1,7 +1,7 @@
 import filmData from './data/film-data.json'
 
 export function Slideshow({index, time, dogBreed}) {
-    console.log(`index in slideshow ${index}`)
+    // console.log(`index in slideshow ${index}`)
     return (
     <>
         <Slide
@@ -19,11 +19,11 @@ export function Slideshow({index, time, dogBreed}) {
 const Slide = ({ filmTitle, filmOriginalTitle, releaseDate, description, coverImage}) => {
     return (
         <div className='slide'>
-            <h1>{filmTitle}</h1>
-            <h2>{filmOriginalTitle}</h2>
-            <p>{releaseDate}</p>
-            <p>{description}</p>
             <img src={coverImage} alt='Movie Poster' />
+            <div className='filmTitle'><h1>{filmTitle}</h1></div>
+            <div className='filmOriginalTitle'><h2>{filmOriginalTitle}</h2></div>
+            <div className='releaseDate'><p>{releaseDate}</p></div>
+            <div className='filmDescription'><p>{description}</p></div>
         </div>
     )
 }

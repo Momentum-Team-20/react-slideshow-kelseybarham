@@ -3,5 +3,25 @@ body {
 }
 
 img {
-  max-width: 200px;
+  max-width: 250px;
+  float: left;
+  padding: 0 20px 20px 0;
+}
+
+.filmTitle {
+  font-weight: bold;
+  text-align: center;
+}
+
+.filmOriginalTitle {
+  text-align: center;
+}
+
+.releaseDate {
+  text-align: center;
+  font-size: smaller;
+}
+
+.filmDescription {
+  text-align: left;
 }
